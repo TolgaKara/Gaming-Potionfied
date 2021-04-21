@@ -22,9 +22,9 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 /*API ENDPOINTS*/
 // Base URL
-const baseURL = "https://api.rawg.io/api/";
+const baseURL = `https://api.rawg.io/api/`;
 
 // Popular Games
-const popularGames = `games?dates${lastYear},${currentDate}&ordering=-rating&page_size=10`;
+const popularGames = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates${lastYear},${currentDate}&ordering=-rating&page_size=10`;
 
 export const popularGamesURL = () => `${baseURL}${popularGames}`;
