@@ -27,4 +27,12 @@ const baseURL = `https://api.rawg.io/api/`;
 // Popular Games
 const popularGames = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates${lastYear},${currentDate}&ordering=-rating&page_size=10`;
 
+// upcoming Games
+const upcomingGames = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates${currentDate},${nextYear}&ordering=-added&page_size=10`;
+
+// new Games
+const newGames = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates${lastYear},${currentDate}&ordering=-released&page_size=10`;
+
 export const popularGamesURL = () => `${baseURL}${popularGames}`;
+export const upcomingGamesURL = () => `${baseURL}${upcomingGames}`;
+export const newGamesURL = () => `${baseURL}${newGames}`;
