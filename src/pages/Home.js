@@ -16,7 +16,7 @@ const Home = () => {
 	}, [dispatch]);
 
 	// Get the Data from the Store
-	const { popular, newGames, upcoming } = useSelector((state) => state.games);
+	const { popular, newest, upcoming } = useSelector((state) => state.games);
 
 	return (
 		<GameList>
@@ -46,7 +46,7 @@ const Home = () => {
 			</Games>
 			<h2>Newest Games</h2>
 			<Games>
-				{newGames.map((game) => (
+				{newest.map((game) => (
 					<Game
 						name={game.name}
 						released={game.released}
