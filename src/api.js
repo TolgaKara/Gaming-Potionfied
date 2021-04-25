@@ -36,3 +36,11 @@ const newGames = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates${lastYea
 export const popularGamesURL = () => `${baseURL}${popularGames}`;
 export const upcomingGamesURL = () => `${baseURL}${upcomingGames}`;
 export const newGamesURL = () => `${baseURL}${newGames}`;
+
+// Details of the Game
+export const gameDetailsURL = (gameId) =>
+	`${baseURL}games/${gameId}?key=${process.env.REACT_APP_RAWG_API_KEY}`;
+
+// Game Screenshots
+export const gameScreenshotURL = (gameId) =>
+	`${baseURL}games/${gameId}/screenshots?key=${process.env.REACT_APP_RAWG_API_KEY}`;
