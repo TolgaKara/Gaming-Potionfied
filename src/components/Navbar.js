@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 // Redux and Routes
 import { fetchSearch } from "../actions/gamesAction";
 import { useDispatch } from "react-redux";
+import { fadeIn } from "../animations";
 
 const Navbar = () => {
 	const dispatch = useDispatch();
@@ -29,7 +30,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<StyledNav>
+		<StyledNav variants={fadeIn} initial='hidden' animate='show'>
 			<Logo onClick={clearSearch}>
 				<GiPotionBall /> Gaming Potionfied
 			</Logo>
